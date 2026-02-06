@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFC | Catálogos Digitales Inteligentes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary: #2563EB; 
+            --accent: #16A34A;
+            --dark: #0F172A;
+        }
+
+        body { font-family: 'Inter', sans-serif; color: var(--dark); background-color: #fff; }
+
+        /* Navbar */
+        .navbar { background: white; border-bottom: 1px solid #e2e8f0; }
+        .brand-logo { font-weight: 900; letter-spacing: -1px; color: var(--dark); }
+
+        /* Hero */
+        .hero { padding: 80px 0; background: radial-gradient(circle at top right, #eff6ff, #fff); }
+        .hero h1 { font-weight: 900; font-size: 2.8rem; }
+        .highlight { color: var(--primary); position: relative; z-index: 1; }
+        .highlight::after { content: ''; position: absolute; bottom: 5px; left: 0; width: 100%; height: 10px; background-color: #bfdbfe; z-index: -1; opacity: 0.6; }
+
+        /* Demos Section */
+        .demo-frame {
+            border: 8px solid #333;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            background: #000;
+        }
+        .demo-video { height: 500px; width: 100%; object-fit: cover; }
+        .demo-img { height: 500px; width: 100%; object-fit: cover; opacity: 0.9; }
+
+        /* Tarjetas de Experiencia */
+        .experience-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.3s;
+            height: 100%;
+        }
+        .experience-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        /* Precios */
+        .pricing-card { border: none; border-radius: 20px; background: white; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: transform 0.3s; position: relative; overflow: hidden; }
+        .pricing-card:hover { transform: translateY(-5px); }
+        .pricing-card.popular { border: 2px solid var(--primary); }
+        .badge-popular { background: var(--primary); color: white; position: absolute; top: 0; right: 0; padding: 5px 15px; font-size: 0.8rem; font-weight: bold; border-bottom-left-radius: 10px; }
+        .price-amount { font-size: 2.5rem; font-weight: 800; }
+
+        /* Botón CTA */
+        .btn-cta { background-color: var(--accent); color: white; font-weight: 700; padding: 15px 30px; border-radius: 50px; box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.4); transition: 0.3s; }
+        .btn-cta:hover { background-color: #15803d; transform: scale(1.05); color: white; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar fixed-top shadow-sm">
+        <div class="container justify-content-center">
+            <span class="navbar-brand brand-logo fs-3">
+                AFC<span class="text-primary">Digital</span>
+            </span>
+        </div>
+    </nav>
+
+    <section class="hero d-flex align-items-center mt-4">
+        <div class="container text-center mt-5">
+            <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3 fw-bold">
+                🚀 Especialistas en Catálogos Web
+            </div>
+            <h1 class="mb-4">Tu negocio no cabe en un PDF.<br>Pásate a <span class="highlight">AFC Digital</span>.</h1>
+            <p class="lead text-secondary mb-5 mx-auto" style="max-width: 700px;">
+                Creamos catálogos interactivos que cargan rápido, se ven increíbles en el celular y permiten comprar directo al WhatsApp. Sin descargas molestas.
+            </p>
+            <a href="#precios" class="btn btn-cta btn-lg">
+                <i class="bi bi-whatsapp me-2"></i> Ver Planes y Precios
+            </a>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Mira la diferencia</h2>
+                <p class="text-muted">Así verán tus clientes tu nuevo catálogo.</p>
+            </div>
+            <div class="row g-5 align-items-center justify-content-center">
+                <div class="col-md-4 text-center">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-play-circle-fill text-danger"></i> Navegación Fluida</h5>
+                    <div class="demo-frame">
+                        <video class="demo-video" autoplay loop muted playsinline poster="https://via.placeholder.com/300x600/cccccc/333333?text=Video+Demo+Scroll">
+                             <source src="https://player.vimeo.com/external/480678839.sd.mp4?s=d00923058b73f8a0e2a230787e91d8e137456d91&profile_id=165" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="small text-muted mt-2">El cliente explora sin cortes ni esperas.</p>
+                </div>
+                
+                <div class="col-md-4 text-center">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-image text-primary"></i> Ficha de Producto</h5>
+                    <div class="demo-frame">
+                        <img src="https://images.pexels.com/photos/3806253/pexels-photo-3806253.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ejemplo Producto" class="demo-img">
+                    </div>
+                    <p class="small text-muted mt-2">Fotos grandes y botón de compra claro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+             <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <i class="bi bi-phone-vibrate fs-1 text-primary"></i>
+                        <h5 class="fw-bold mt-2">100% Móvil</h5>
+                        <p class="text-muted small">Diseñado para el dedo pulgar, no para el mouse.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <i class="bi bi-cloud-arrow-up fs-1 text-primary"></i>
+                        <h5 class="fw-bold mt-2">Siempre Actualizado</h5>
+                        <p class="text-muted small">Olvídate de enviar "Fe de erratas" por precios viejos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <i class="bi bi-whatsapp fs-1 text-success"></i>
+                        <h5 class="fw-bold mt-2">WhatsApp Directo</h5>
+                        <p class="text-muted small">Los pedidos llegan a tu chat listos para cerrar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h6 class="text-center text-uppercase text-primary fw-bold mb-2">Casos de Éxito</h6>
+            <h2 class="text-center fw-bold mb-5">Funciona para cualquier rubro</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-3">
+                    <div class="experience-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-handbag-fill fs-3 text-warning me-2"></i>
+                            <h6 class="fw-bold m-0">Tienda de Moda</h6>
+                        </div>
+                        <p class="small text-muted">"Tengo 40 referencias de jeans. Con el PDF era un caos, ahora con la web filtran por talla y me escriben solo cuando saben qué quieren."</p>
+                        <div class="mt-3 border-top pt-2 small fw-bold">Resultados: -50% tiempo en chat</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <div class="experience-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-cup-hot-fill fs-3 text-danger me-2"></i>
+                            <h6 class="fw-bold m-0">Restaurante / Menú</h6>
+                        </div>
+                        <p class="small text-muted">"Usamos la landing como Menú Digital QR. La gente ve las fotos de las hamburguesas en HD y pide mucho más que con el menú de texto."</p>
+                        <div class="mt-3 border-top pt-2 small fw-bold">Resultados: +20% ticket promedio</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <div class="experience-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-tools fs-3 text-secondary me-2"></i>
+                            <h6 class="fw-bold m-0">Servicios Técnicos</h6>
+                        </div>
+                        <p class="small text-muted">"Soy técnico de lavadoras. Mi landing muestra mis precios, zonas de cobertura y botón de urgencias. Me veo más profesional que la competencia."</p>
+                        <div class="mt-3 border-top pt-2 small fw-bold">Resultados: Más confianza</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <div class="experience-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-laptop fs-3 text-primary me-2"></i>
+                            <h6 class="fw-bold m-0">Accesorios Tech</h6>
+                        </div>
+                        <p class="small text-muted">"Manejo muchos cables y forros. En el PDF nadie bajaba hasta el final. En la web hacen scroll rápido y ven todo el inventario."</p>
+                        <div class="mt-3 border-top pt-2 small fw-bold">Resultados: Venta de stock viejo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Planes Claros</h2>
+                <p class="text-muted">Precios ajustados al tamaño de tu inventario.</p>
+            </div>
+
+            <div class="row justify-content-center g-4">
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card h-100 border-0 shadow-sm bg-light">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-secondary text-uppercase mb-3">Suscripción</h5>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="price-amount">$40.000</span><span class="text-muted ms-1">/mes</span>
+                            </div>
+                            <p class="small text-muted text-uppercase fw-bold ls-1 mb-4">+ $80.000 Configuración Inicial</p>
+                            
+                            <ul class="list-unstyled mb-4 small">
+                                <li class="mb-2"><i class="bi bi-box-seam text-primary me-2"></i><strong>Hasta 50 Productos</strong></li>
+                                <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i>Hosting Incluido</li>
+                                <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i>Soporte Técnico</li>
+                                <li class="mb-2 text-muted"><i class="bi bi-info-circle me-2"></i>Pagos mensuales</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20la%20Suscripción" class="btn btn-outline-dark rounded-pill">Empezar Ahora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-primary text-uppercase mb-3">Pago Único Estándar</h5>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="price-amount">$180.000</span><span class="text-muted ms-1">único</span>
+                            </div>
+                            <p class="small text-muted mb-4">Ideal para catálogos medianos.</p>
+                            
+                            <ul class="list-unstyled mb-4 small">
+                                <li class="mb-2 fs-6"><i class="bi bi-box-seam-fill text-success me-2"></i><strong>Hasta 50 Productos</strong></li>
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Diseño y Montaje Completo</li>
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Sin mensualidades</li>
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Entrega de Archivos</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="https://wa.me/573000000000?text=Hola,%20quiero%20el%20Plan%20Estándar" class="btn btn-primary fw-bold rounded-pill">Elegir Estándar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card popular h-100">
+                        <div class="badge-popular">RECOMENDADO</div>
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-dark text-uppercase mb-3">Pago Único PRO</h5>
+                            <div class="d-flex align-items-baseline mb-3">
+                                <span class="price-amount">$280.000</span><span class="text-muted ms-1">único</span>
+                            </div>
+                            <p class="small text-muted mb-4">Para catálogos grandes y profesionales.</p>
+                            
+                            <ul class="list-unstyled mb-4 small">
+                                <li class="mb-2 fs-6"><i class="bi bi-box-seam-fill text-primary me-2"></i><strong>Hasta 100 Productos</strong></li>
+                                <li class="mb-2"><i class="bi bi-globe text-primary me-2"></i><strong>Dominio .COM (1 año)</strong></li>
+                                <li class="mb-2"><i class="bi bi-qr-code text-primary me-2"></i>Tarjeta QR para mostrador</li>
+                                <li class="mb-2"><i class="bi bi-person-video3 text-primary me-2"></i>Capacitación de uso</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="https://wa.me/573000000000?text=Hola,%20quiero%20el%20Plan%20PRO%20con%20Dominio" class="btn btn-dark fw-bold rounded-pill">Comprar PRO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p class="text-muted small">
+                    <i class="bi bi-exclamation-circle-fill me-1"></i> 
+                    ¿Tienes más de 100 productos? <a href="https://wa.me/573000000000" class="fw-bold text-primary text-decoration-none">Contáctanos para una cotización especial.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container text-center">
+            <h4 class="fw-bold mb-3">AFC Digital</h4>
+            <p class="mb-4 text-white-50">Modernizando el comercio en Colombia.</p>
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+            </div>
+            <div class="small text-white-50">
+                &copy; 2026 AFC Digital. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
