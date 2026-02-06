@@ -27,16 +27,29 @@
         .highlight { color: var(--primary); position: relative; z-index: 1; }
         .highlight::after { content: ''; position: absolute; bottom: 5px; left: 0; width: 100%; height: 10px; background-color: #bfdbfe; z-index: -1; opacity: 0.6; }
 
-        /* Demos Section */
+        /* Demos Section - ESTILOS AJUSTADOS PARA MEDIA LOCAL */
         .demo-frame {
             border: 8px solid #333;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
             background: #000;
+            position: relative;
         }
-        .demo-video { height: 500px; width: 100%; object-fit: cover; }
-        .demo-img { height: 500px; width: 100%; object-fit: cover; opacity: 0.9; }
+        
+        /* Ajuste para que el video y la imagen llenen bien el marco */
+        .demo-video { 
+            width: 100%; 
+            height: 500px; /* Altura fija para uniformidad */
+            object-fit: cover; 
+            display: block;
+        }
+        .demo-img { 
+            width: 100%; 
+            height: 500px; 
+            object-fit: cover; 
+            display: block;
+        }
 
         /* Tarjetas de Experiencia */
         .experience-card {
@@ -95,11 +108,13 @@
                 <p class="text-muted">Así verán tus clientes tu nuevo catálogo.</p>
             </div>
             <div class="row g-5 align-items-center justify-content-center">
+                
                 <div class="col-md-4 text-center">
                     <h5 class="fw-bold mb-3"><i class="bi bi-play-circle-fill text-danger"></i> Navegación Fluida</h5>
                     <div class="demo-frame">
-                        <video class="demo-video" autoplay loop muted playsinline poster="https://via.placeholder.com/300x600/cccccc/333333?text=Video+Demo+Scroll">
-                             <source src="https://player.vimeo.com/external/480678839.sd.mp4?s=d00923058b73f8a0e2a230787e91d8e137456d91&profile_id=165" type="video/mp4">
+                        <video class="demo-video" autoplay loop muted playsinline poster="imagen.jpg">
+                            <source src="video.mp4" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
                         </video>
                     </div>
                     <p class="small text-muted mt-2">El cliente explora sin cortes ni esperas.</p>
@@ -108,10 +123,11 @@
                 <div class="col-md-4 text-center">
                     <h5 class="fw-bold mb-3"><i class="bi bi-image text-primary"></i> Ficha de Producto</h5>
                     <div class="demo-frame">
-                        <img src="https://images.pexels.com/photos/3806253/pexels-photo-3806253.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ejemplo Producto" class="demo-img">
+                        <img src="imagen.jpg" alt="Ejemplo Producto" class="demo-img">
                     </div>
                     <p class="small text-muted mt-2">Fotos grandes y botón de compra claro.</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -160,7 +176,6 @@
                         <div class="mt-3 border-top pt-2 small fw-bold">Resultados: -50% tiempo en chat</div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-lg-3">
                     <div class="experience-card">
                         <div class="d-flex align-items-center mb-3">
@@ -171,7 +186,6 @@
                         <div class="mt-3 border-top pt-2 small fw-bold">Resultados: +20% ticket promedio</div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-lg-3">
                     <div class="experience-card">
                         <div class="d-flex align-items-center mb-3">
@@ -182,7 +196,6 @@
                         <div class="mt-3 border-top pt-2 small fw-bold">Resultados: Más confianza</div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-lg-3">
                     <div class="experience-card">
                         <div class="d-flex align-items-center mb-3">
@@ -241,62 +254,4 @@
                                 <li class="mb-2 fs-6"><i class="bi bi-box-seam-fill text-success me-2"></i><strong>Hasta 50 Productos</strong></li>
                                 <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Diseño y Montaje Completo</li>
                                 <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Sin mensualidades</li>
-                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Entrega de Archivos</li>
-                            </ul>
-                            <div class="d-grid">
-                                <a href="https://wa.me/573000000000?text=Hola,%20quiero%20el%20Plan%20Estándar" class="btn btn-primary fw-bold rounded-pill">Elegir Estándar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card pricing-card popular h-100">
-                        <div class="badge-popular">RECOMENDADO</div>
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold text-dark text-uppercase mb-3">Pago Único PRO</h5>
-                            <div class="d-flex align-items-baseline mb-3">
-                                <span class="price-amount">$280.000</span><span class="text-muted ms-1">único</span>
-                            </div>
-                            <p class="small text-muted mb-4">Para catálogos grandes y profesionales.</p>
-                            
-                            <ul class="list-unstyled mb-4 small">
-                                <li class="mb-2 fs-6"><i class="bi bi-box-seam-fill text-primary me-2"></i><strong>Hasta 100 Productos</strong></li>
-                                <li class="mb-2"><i class="bi bi-globe text-primary me-2"></i><strong>Dominio .COM (1 año)</strong></li>
-                                <li class="mb-2"><i class="bi bi-qr-code text-primary me-2"></i>Tarjeta QR para mostrador</li>
-                                <li class="mb-2"><i class="bi bi-person-video3 text-primary me-2"></i>Capacitación de uso</li>
-                            </ul>
-                            <div class="d-grid">
-                                <a href="https://wa.me/573000000000?text=Hola,%20quiero%20el%20Plan%20PRO%20con%20Dominio" class="btn btn-dark fw-bold rounded-pill">Comprar PRO</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <p class="text-muted small">
-                    <i class="bi bi-exclamation-circle-fill me-1"></i> 
-                    ¿Tienes más de 100 productos? <a href="https://wa.me/573000000000" class="fw-bold text-primary text-decoration-none">Contáctanos para una cotización especial.</a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-white py-5 mt-5">
-        <div class="container text-center">
-            <h4 class="fw-bold mb-3">AFC Digital</h4>
-            <p class="mb-4 text-white-50">Modernizando el comercio en Colombia.</p>
-            <div class="d-flex justify-content-center gap-4 mb-4">
-                <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
-                <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
-            </div>
-            <div class="small text-white-50">
-                &copy; 2026 AFC Digital. Todos los derechos reservados.
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2">
